@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zen Antique', serif;
+    line-height: 2;
+}
+
+.header {
+    height: 130vh;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.582), rgba(0, 0, 0, 0.575)) , url('../img/img3.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.text-box h1 {
+    text-transform: uppercase;
+    color: rgb(255, 227, 190);
+    text-shadow: 0 0 5px rgb(59, 32, 32);
+}
+
+.heading-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.1rem;
+    animation-name: moveInLeft;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.heading-sub {
+    display: block;
+    font-size: 1.6rem;
+    letter-spacing: 1.3rem;
+    animation-name: moveInRight;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    border-bottom: 0.2rem solid rgb(238, 173, 173);
+    color: rgb(247, 217, 217);
+    display: inline-block;
+    font-size: 3rem;
+    padding: 1rem;
+    margin-top: 5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    
+}
+
+.btn:hover {
+    background-color: rgba(182, 121, 121, 0.493);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.btn:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(5px);
+}
+
+.main {
+    background-color: rgb(238, 173, 173);
+    height: 95vh;
+    margin-top: -5rem;
+    text-align: center;
+    padding-top: 5rem;
+    clip-path: polygon(46% 5%, 75% 9%, 100% 0, 100% 100%, 63% 99%, 27% 94%, 0 100%, 0 0, 21% 0);
+}
+
+.main h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: snow;
+    text-shadow: 0 0 5px rgb(59, 32, 32);
+}
+
+.gallery {
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.gallery_photo {
+    width: 500px;
+    position: absolute;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.575);
+    outline-offset: 1rem;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.gallery_photo:hover {
+    transform: scale(1.1);
+    z-index: 20;
+    outline: 1.8rem solid rgba(182, 121, 121, 0.493);
+}
+
+.gallery_photo1 {
+    left: 10%;
+    width: 300px;
+}
+
+.gallery_photo2 {
+    top: 20%;
+    right: 15%;
+    width: 250px;
+}
+
+.gallery_photo3 {
+    top: 5%;
+    left: 40%;
+    width: 200px;
+}
+
+.footer {
+    font-size: 1rem;
+    color: salmon;
+    height: 20vh;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 2rem;
+}
+
+.footer ul li a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.footer ul li:hover, .footer ul li a:hover {
+    color: rgb(250, 46, 24);
+    transform: scale(1.2);
+}
